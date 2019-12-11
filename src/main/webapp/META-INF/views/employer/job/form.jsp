@@ -26,9 +26,15 @@
 	<acme:form-textbox code="employer.job.form.label.active" path="active" />
 	<acme:form-textarea code="employer.job.form.label.description" path="descriptor.description" />
 	
+	
 	<button type="button" onclick="javascript: clearReturnUrl(); redirect('/employer/duty/list-mine?id=${descriptor.id}')"
             class="btn btn-default">
             <acme:message code="employer.job.form.button.duties"/>
+    </button>
+    
+    <button type="button" onclick="javascript: clearReturnUrl(); redirect('/employer/application/list-mine?id=${application.id}')"
+            class="btn btn-default">
+            <acme:message code="employer.job.form.button.applications"/>
     </button>
     
 	

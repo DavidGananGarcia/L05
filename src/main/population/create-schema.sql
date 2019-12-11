@@ -32,7 +32,6 @@
         `some_skills` varchar(255),
         `statement` varchar(255),
         `status` integer,
-        `job_id` integer not null,
         `worker_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -139,6 +138,7 @@
         `salary_currency` varchar(255),
         `status` integer,
         `title` varchar(255),
+        `application_id` integer,
         `descriptor_id` integer not null,
         `employer_id` integer not null,
         primary key (`id`)
@@ -227,11 +227,6 @@
        references `user_account` (`id`);
 
     alter table `application` 
-       add constraint `FKoa6p4s2oyy7tf80xwc4r04vh6` 
-       foreign key (`job_id`) 
-       references `job` (`id`);
-
-    alter table `application` 
        add constraint `FKmbjdoxi3o93agxosoate4sxbt` 
        foreign key (`worker_id`) 
        references `worker` (`id`);
@@ -255,6 +250,11 @@
        add constraint FK_na4dfobmeuxkwf6p75abmb2tr 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `job` 
+       add constraint `FKfk8s2irfvt7vonpjcupq6nxf` 
+       foreign key (`application_id`) 
+       references `application` (`id`);
 
     alter table `job` 
        add constraint `FKfqwyynnbcsq0htxho3vchpd2u` 

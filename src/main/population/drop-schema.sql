@@ -9,10 +9,6 @@
 
     alter table `application` 
        drop 
-       foreign key `FKoa6p4s2oyy7tf80xwc4r04vh6`;
-
-    alter table `application` 
-       drop 
        foreign key `FKmbjdoxi3o93agxosoate4sxbt`;
 
     alter table `authenticated` 
@@ -30,6 +26,10 @@
     alter table `employer` 
        drop 
        foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
+
+    alter table `job` 
+       drop 
+       foreign key `FKfk8s2irfvt7vonpjcupq6nxf`;
 
     alter table `job` 
        drop 
