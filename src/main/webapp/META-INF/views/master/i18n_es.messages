@@ -84,6 +84,11 @@ master.menu.worker.applications.list = Listar Aplicaciones
 master.menu.employer = Empleado
 master.menu.employer.job.listMine = Listar mis trabajos
 
+# master.menu.auditor #########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.auditRecord.listMine = Listar mis registros de auditorías
+
 # master.menu.authenticated ##################################################
 
 master.menu.authenticated.jobs= Listar trabajos activos

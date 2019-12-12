@@ -100,7 +100,12 @@ master.menu.user-account.investor= List Investors
 master.menu.employer = Employer
 master.menu.employer.job.listMine = List my jobs
 
-# master.menu.authenticated ##################################################
+# master.menu.auditor #########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.auditRecord.listMine = List my audit records
+
+# master.menu.authenticated ###################################################
 
 master.menu.authenticated.jobs= List active jobs
 
