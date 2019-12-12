@@ -15,12 +15,14 @@ employer.job.form.label.salary= Salary:
 employer.job.form.label.moreInfo= More Information:
 employer.job.form.label.finalMode= Final Mode:
 employer.job.form.label.status= Status:
-employer.job.form.label.descriptor = Descriptor:
 employer.job.form.label.finalMode = Final Mode:
 employer.job.form.label.status = Status:
+employer.job.form.label.active = Active: 
+employer.job.form.label.description = Description:
 
 employer.job.form.button.return= Return
 employer.job.form.button.duties= Duties
+employer.job.form.button.applications = The Application
 
 employer.job.list.label.reference= Reference
 employer.job.list.label.deadline= Deadline

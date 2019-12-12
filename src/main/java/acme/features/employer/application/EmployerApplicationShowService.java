@@ -10,66 +10,64 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.employer.job;
+package acme.features.employer.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.entities.jobs.Job;
+import acme.entities.applications.Application;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class EmployerJobShowService implements AbstractShowService<Employer, Job> {
+public class EmployerApplicationShowService implements AbstractShowService<Employer, Application> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private EmployerJobRepository repository;
+	EmployerApplicationRepository repository;
 
 	// AbstractCreateService<Authenticated, Consumer> ---------------------------
 
 
 	@Override
-	public boolean authorise(final Request<Job> request) {
+	public boolean authorise(final Request<Application> request) {
 		assert request != null;
-
-		boolean result;
-		int jobId;
-		Job job;
-		Employer employer;
-		Principal principal;
-
-		jobId = request.getModel().getInteger("id");
-		job = this.repository.findOneJobById(jobId);
-		employer = job.getEmployer();
-		principal = request.getPrincipal();
-		result = job.isFinalMode() || !job.isFinalMode() && employer.getUserAccount().getId() == principal.getAccountId();
-		return result;
+		//
+		//		boolean result;
+		//		int applicationId;
+		//		Application application;
+		//		Employer employer;
+		//		Principal principal;
+		//
+		//		applicationId = request.getModel().getInteger("id");
+		//		application = this.repository.findOneApplicationById(applicationId);
+		//		worker = application.getWorker();
+		//		principal = request.getPrincipal();
+		//		result = worker.getUserAccount().getId() == principal.getAccountId();
+		return true;
 	}
 
 	@Override
-	public void unbind(final Request<Job> request, final Job entity, final Model model) {
+	public void unbind(final Request<Application> request, final Application entity, final Model model) {
 		assert request != null;
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "reference", "title", "deadline", "salary", "moreInfo", "finalMode", "status", "active", "descriptor", "descriptor.description", "application", "application.id");
-		//		request.unbind(entity, model, "salary", "moreInfo", "description", "finalMode");
+		request.unbind(entity, model, "referenceNumber", "creationMoment", "status", "statement", "someSkills", "someQualifications");
 	}
 
 	@Override
-	public Job findOne(final Request<Job> request) {
+	public Application findOne(final Request<Application> request) {
 		assert request != null;
 
-		Job result;
+		Application result;
 		int id;
 
 		id = request.getModel().getInteger("id");
-		result = this.repository.findOneJobById(id);
+		result = this.repository.findOneApplicationById(id);
 
 		return result;
 	}
