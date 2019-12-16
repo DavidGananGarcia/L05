@@ -268,6 +268,9 @@
 		<property name="someSkills" value="Flow" />
 		<property name="someQualifications" value="ten" />
 		<property name="worker" ref="worker1Worker" />
+		<property name="justification" value="justificationDaga1" />
+		<property name="job" ref="job1" />
+		
 	</bean>
 
 	<bean name="application2" class="acme.entities.applications.Application">
@@ -278,6 +281,8 @@
 		<property name="someSkills" value="Ingenio" />
 		<property name="someQualifications" value="nivel" />
 		<property name="worker" ref="worker1Worker" />
+		<property name="justification" value="justificationDaga2" />
+		<property name="job" ref="job2" />
 	</bean>
 	
 	
@@ -352,7 +357,7 @@
 		<property name="active" value="true"></property>
 		<property name="employer" ref="employer1Employer" />
 		<property name="descriptor" ref="descriptor1"/>
-		<property name="application" ref="application1"></property>
+		
 	</bean>
 
 	<bean name="job2" class="acme.entities.jobs.Job">
@@ -366,7 +371,7 @@
 		<property name="active" value="false"></property>
 		<property name="employer" ref="employer1Employer" />
 		<property name="descriptor" ref="descriptor2"/>
-		<property name="application" ref="application2"></property>
+		
 	</bean>
 
 

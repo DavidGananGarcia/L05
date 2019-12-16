@@ -14,7 +14,7 @@
 	employer.application.list.label.statement =  Statement
 	employer.application.list.label.someSkills =  Some skills
 	employer.application.list.label.someQualifications =  Some qualifications
-	
+	employer.application.list.label.justification =  Justification
 
 	employer.application.form.button.return =  Return
     employer.application.form.label.referenceNumber =  Reference number
@@ -23,8 +23,9 @@
 	employer.application.form.label.statement =  Statement
 	employer.application.form.label.someSkills =  Some skills
 	employer.application.form.label.someQualifications =  Some qualifications
+	employer.application.form.label.justification =  Justification
 	
-
+    employer.application.form.button.update= Update
 	employer.application.form.button.return =  Return
 
 

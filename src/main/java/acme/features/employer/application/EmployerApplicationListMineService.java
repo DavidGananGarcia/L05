@@ -56,7 +56,7 @@ public class EmployerApplicationListMineService implements AbstractListService<E
 
 		Collection<Application> result;
 
-		result = this.repository.findManyApplicationById(request.getModel().getInteger("id"));
+		result = this.repository.findManyApplicationById(request.getPrincipal().getActiveRoleId());
 
 		return result;
 	}
