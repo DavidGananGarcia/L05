@@ -32,10 +32,7 @@
             <acme:message code="employer.job.form.button.duties"/>
     </button>
     
-    <button type="button" onclick="javascript: clearReturnUrl(); redirect('/employer/application/list-mine?id=${application.id}')"
-            class="btn btn-default">
-            <acme:message code="employer.job.form.button.applications"/>
-    </button>
+    
     
 	
 	
