@@ -15,18 +15,10 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
-<acme:form>
-	<acme:form-textbox code="employer.duty.form.label.title" path="title" />
-	<acme:form-textbox code="employer.duty.form.label.description" path="description" />
-	<acme:form-double code="employer.duty.form.label.percentage" path="percentage" />
+<acme:form readonly="true">
+	<acme:form-textbox code="employer.duty.form.label.title" path="description" />
 	
- 	 
-	 <jstl:if test="${id==0}">
-	<acme:form-submit test="${command == 'create'}" code="employer.duty.form.button.create" action="create?id=${descriptor.id}"/>
-	</jstl:if>
-	<jstl:if test="${id!=0}">
-	<acme:form-submit test="${command == 'create'}" code="employer.duty.form.button.create" action="create?id=${id}"/>
-	</jstl:if>
+	
 	
 	<acme:form-return code="employer.duty.form.button.return" />
 </acme:form>

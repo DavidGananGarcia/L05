@@ -212,6 +212,9 @@
        add constraint UK_rf84q38qr35ymh5nn0dcxfdue unique (`reference_number`);
 
     alter table `job` 
+       add constraint UK_qpodqtu8nvqkof3olnqnqcv2l unique (`descriptor_id`);
+
+    alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);
 
     alter table `user_account` 
