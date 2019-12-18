@@ -20,13 +20,18 @@
     employer.application.form.label.referenceNumber =  Reference number
 	employer.application.form.label.creationMoment =  Creation moment
 	employer.application.form.label.status =  Status
+	employer.application.form.label.status.accepted =  Accepted
+	employer.application.form.label.status.rejected =  Rejected
 	employer.application.form.label.statement =  Statement
 	employer.application.form.label.someSkills =  Some skills
 	employer.application.form.label.someQualifications =  Some qualifications
 	employer.application.form.label.justification =  Justification
 	
+	
     employer.application.form.button.update= Update
 	employer.application.form.button.return =  Return
-
+	
+#errors
+	employer.application.justification.error =  Error for fault of justification
 
 
