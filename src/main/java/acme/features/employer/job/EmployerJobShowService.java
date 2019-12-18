@@ -1,3 +1,4 @@
+
 /*
  * AuthenticatedConsumerCreateService.java
  *
@@ -75,3 +76,4 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 	}
 
 }
+
