@@ -21,6 +21,7 @@ import acme.entities.roles.Employer;
 import acme.framework.components.Errors;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Principal;
 import acme.framework.services.AbstractUpdateService;
 
 @Service
@@ -37,8 +38,18 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 	@Override
 	public boolean authorise(final Request<Application> request) {
 		assert request != null;
+		boolean result;
+		int applicationId;
+		Application application;
+		Employer employer;
+		Principal principal;
 
-		return true;
+		applicationId = request.getModel().getInteger("id");
+		application = this.repository.findOneApplicationById(applicationId);
+		employer = application.getJob().getEmployer();
+		principal = request.getPrincipal();
+		result = employer.getUserAccount().getId() == principal.getAccountId();
+		return result;
 	}
 
 	@Override
@@ -56,7 +67,9 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 		assert entity != null;
 		assert model != null;
 
-		request.unbind(entity, model, "referenceNumber", "creationMoment", "status", "statement", "someSkills", "someQualifications", "justification");
+		request.unbind(entity, model, "referenceNumber", "creationMoment",
+
+			"status", "statement", "someSkills", "someQualifications", "justification");
 	}
 
 	@Override
@@ -74,6 +87,7 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 
 	@Override
 	public void validate(final Request<Application> request, final Application entity, final Errors errors) {
+		
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
@@ -84,11 +98,12 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 		if (!errors.hasErrors("status")) {
 			isRejected = entity.getStatus().equals(Status.REJECTED);
 			if (isRejected) {
-				isJustification = entity.getJustification() != null;
-				errors.state(request, !isJustification, "justification", "employer.application.justification.error");
+				isJustification = entity.getJustification() != null && entity.getJustification().isEmpty() == false;
+				errors.state(request, isJustification, "justification", "employer.application.justification.error");
 			}
 
 		}
+
 	}
 
 	@Override

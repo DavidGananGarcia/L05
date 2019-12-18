@@ -16,14 +16,14 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:form>
-	<acme:form-textbox  code="employer.application.form.label.referenceNumber" path="referenceNumber" readonly="true"/>
+	<acme:form-textbox code="employer.application.form.label.referenceNumber" path="referenceNumber" readonly="true"/>
 	<acme:form-moment  code="employer.application.form.label.creationMoment" path="creationMoment" readonly="true"/>
 	<acme:form-textbox code="employer.application.form.label.statement" path="statement" readonly="true"/>
 	<acme:form-textbox code="employer.application.form.label.someSkills" path="someSkills" readonly="true"/>
 	<acme:form-textbox code="employer.application.form.label.someQualifications" path="someQualifications" readonly="true"/>
+ 	<acme:form-textbox code="employer.application.form.label.status" path="status" placeholder="ACCEPTED o REJECTED" /> 
 
-	
-	<acme:form-textbox code="employer.application.form.label.status" path="status" />
+
 	<acme:form-textarea code="employer.application.form.label.justification" path="justification" />
 	
 	<acme:form-submit test="${command == 'show' }"

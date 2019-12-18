@@ -32,10 +32,9 @@
             <acme:message code="employer.job.form.button.duties"/>
     </button>
     
+
     
-    
-	
-	
+   
 	
 	<acme:form-return code="employer.job.form.button.return" />
 </acme:form>

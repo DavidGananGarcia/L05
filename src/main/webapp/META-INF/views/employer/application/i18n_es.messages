@@ -19,6 +19,8 @@
     employer.application.form.label.referenceNumber =  Numero de referencia
 	employer.application.form.label.creationMoment =  Fecha creacion 
 	employer.application.form.label.status =  Estado
+	employer.application.form.label.status.accepted =  Aceptado
+	employer.application.form.label.status.rejected =  Rechazado
 	employer.application.form.label.statement =  Declaracion
 	employer.application.form.label.someSkills =  Algunas habilidades
 	employer.application.form.label.someQualifications =  Algunas calificaciones
@@ -27,3 +29,7 @@
 
 	employer.application.form.button.return =  Volver
 	employer.application.form.button.update= Actualizar
+	
+	#errors
+	employer.application.justification.error =  Error por falta de justificación
+	
