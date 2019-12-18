@@ -87,22 +87,7 @@ public class EmployerApplicationUpdateService implements AbstractUpdateService<E
 
 	@Override
 	public void validate(final Request<Application> request, final Application entity, final Errors errors) {
-		//		assert request != null;
-		//		assert entity != null;
-		//		assert errors != null;
-		//
-		//		boolean isRejected;
-		//		boolean isJustification;
-		//
-		//		if (!errors.hasErrors("status")) {
-		//			isRejected = entity.getStatus().equals(Status.REJECTED);
-		//			if (isRejected) {
-		//				isJustification = entity.getJustification() != null;
-		//				errors.state(request, !isJustification, "justification", "employer.application.justification.error");
-		//			}
-		//
-		//		}
-
+		
 		assert request != null;
 		assert entity != null;
 		assert errors != null;
