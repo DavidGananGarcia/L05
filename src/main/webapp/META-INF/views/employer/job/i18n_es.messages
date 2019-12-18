@@ -15,13 +15,24 @@ employer.job.form.label.salary= Salario:
 employer.job.form.label.moreInfo= Más Información:
 employer.job.form.label.finalMode= Modo Final:
 employer.job.form.label.status= Estado:
-employer.job.form.label.descriptor= Descriptor:
 employer.job.form.label.finalMode = Modo Final:
 employer.job.form.label.status = Estado:
+employer.job.form.label.active = Activo: 
+employer.job.form.label.description = Descripcion:
+employer.job.form.label.true = Sí
+employer.job.form.label.false = No
+
 
 
 employer.job.form.button.return= Volver
+employer.job.form.button.update= Actualizar
+employer.job.form.button.delete= Eliminar
 employer.job.form.button.duties = Deberes
+employer.job.form.button.create = Crear
+employer.job.form.button.crearduties= Crear un deber
+
+
+
 
 employer.job.list.label.reference= Referencia
 employer.job.list.label.deadline= Fecha Limite
@@ -30,3 +41,11 @@ employer.job.list.label.salary= Salario:
 employer.job.list.label.moreInfo= Más Información:
 employer.job.list.label.finalMode= Modo Final:
 employer.job.list.label.status= Estado:
+
+
+#ERRORES
+employer.job.error.finalmode = No se puede actualizar un trabajo en modo final
+employer.job.error.conaplicacion = No se puede eliminar si hay una aplicación asignada a tu trabajo
+employer.job.error.descriptor.description = Su descripcion contiene palabras spam
+employer.job.error.titulo = Su titulo contiene palabras spam
+employer.job.error.descriptor.dutiesCien = El porcentaje semanal de los deberes no suma 100%

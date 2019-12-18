@@ -13,13 +13,6 @@ employer.duty.form.label.description = Descripcion:
 employer.duty.form.label.percentage = Porcentaje:
 
 
-employer.duty.form.button.return= Pagina de inicio
-employer.duty.form.button.create = Crear
+employer.job.form.button.return= Volver
 
-employer.duty.list.label.title = Titulo:
-employer.duty.list.label.description = Descripcion:
-employer.duty.list.label.percentage = Porcentaje:
-
-#ERRORES
-
-error.duty.sumapercentages = La suma de porcentajes de las dutys no puede ser superior a 100%
+employer.descriptor.list.label.description = Descripcion:

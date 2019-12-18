@@ -27,12 +27,13 @@
        `id` integer not null,
         `version` integer not null,
         `creation_moment` datetime(6),
+        `justification` varchar(255),
         `reference_number` varchar(255),
         `some_qualifications` varchar(255),
         `some_skills` varchar(255),
         `statement` varchar(255),
         `status` integer,
-        `job_id` integer not null,
+        `job_id` integer,
         `worker_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
@@ -209,6 +210,9 @@
 
     alter table `application` 
        add constraint UK_rf84q38qr35ymh5nn0dcxfdue unique (`reference_number`);
+
+    alter table `job` 
+       add constraint UK_qpodqtu8nvqkof3olnqnqcv2l unique (`descriptor_id`);
 
     alter table `job` 
        add constraint UK_7jmfdvs0b0jx7i33qxgv22h7b unique (`reference`);

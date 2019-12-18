@@ -268,18 +268,21 @@
 		<property name="someSkills" value="Flow" />
 		<property name="someQualifications" value="ten" />
 		<property name="worker" ref="worker1Worker" />
-		<property name="job" ref="job1"></property>
+		<property name="justification" value="justificationDaga1" />
+		<property name="job" ref="job1" />
+		
 	</bean>
 
 	<bean name="application2" class="acme.entities.applications.Application">
-		<property name="referenceNumber" value="W001-4562" />
+		<property name="referenceNumber" value="W002-4562" />
 		<property name="creationMoment" value="2018/07/10 23:53" />
 		<property name="status" value="ACCEPTED" />
 		<property name="statement" value="Buen estado" />
 		<property name="someSkills" value="Ingenio" />
 		<property name="someQualifications" value="nivel" />
 		<property name="worker" ref="worker1Worker" />
-		<property name="job" ref="job2"></property>
+		<property name="justification" value="justificationDaga2" />
+		<property name="job" ref="job2" />
 	</bean>
 	
 	
@@ -341,6 +344,20 @@
 	<property name="descriptor" ref="descriptor2"/>
 	</bean>
 	
+	<bean name="duty3"   class="acme.entities.jobs.Duty">
+	<property name="title" value="duty3"/>
+	<property name="description" value="Análisis de requisitos"/>
+	<property name="percentage" value="42."/>
+	<property name="descriptor" ref="descriptor1"/>
+	</bean>
+	
+	<bean name="duty4"   class="acme.entities.jobs.Duty">
+	<property name="title" value="duty4"/>
+	<property name="description" value="Tratamiento de recursos"/>
+	<property name="percentage" value="38."/>
+	<property name="descriptor" ref="descriptor1"/>
+	</bean>
+	
 <!-- JOBS -->		
 		
 	<bean name="job1" class="acme.entities.jobs.Job">
@@ -354,6 +371,7 @@
 		<property name="active" value="true"/>
 		<property name="employer" ref="employer1Employer" />
 		<property name="descriptor" ref="descriptor1"/>
+		
 	</bean>
 
 	<bean name="job2" class="acme.entities.jobs.Job">
@@ -367,12 +385,7 @@
 		<property name="active" value="false"/>
 		<property name="employer" ref="employer1Employer" />
 		<property name="descriptor" ref="descriptor2"/>
+		
 	</bean>
-
-
-
-
-
-
 </beans>
 

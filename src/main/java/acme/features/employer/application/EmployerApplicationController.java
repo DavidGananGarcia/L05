@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.employer.duty;
+package acme.features.employer.application;
 
 import javax.annotation.PostConstruct;
 
@@ -19,42 +19,33 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.components.CustomCommand;
-import acme.entities.jobs.Duty;
+import acme.entities.applications.Application;
 import acme.entities.roles.Employer;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
 
 @Controller
-@RequestMapping("/employer/duty")
-public class EmployerDutyController extends AbstractController<Employer, Duty> {
+@RequestMapping("/employer/application")
+public class EmployerApplicationController extends AbstractController<Employer, Application> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private EmployerDutyListMineService	listmineService;
+	private EmployerApplicationShowService		showService;
 
 	@Autowired
-	private EmployerDutyCreateService	createService;
+	private EmployerApplicationListMineService	listMineService;
 
 	@Autowired
-	private EmployerDutyUpdateService	updateService;
-
-	@Autowired
-	private EmployerDutyDeleteService	deleteService;
-
-	@Autowired
-	private EmployerDutyShowService		showService;
-
-
+	private EmployerApplicationUpdateService	updateService;
 	// Constructors -----------------------------------------------------------
+
 
 	@PostConstruct
 	private void initialise() {
-		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listmineService);
-		super.addBasicCommand(BasicCommand.CREATE, this.createService);
-		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
-		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
 		super.addBasicCommand(BasicCommand.SHOW, this.showService);
+		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listMineService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
 	}
 
 }
