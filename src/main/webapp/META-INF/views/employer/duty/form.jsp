@@ -28,5 +28,21 @@
 	<acme:form-submit test="${command == 'create'}" code="employer.duty.form.button.create" action="create?id=${id}"/>
 	</jstl:if>
 	
+	<acme:form-submit test="${command == 'show' }"
+	 code="employer.job.form.button.update" 
+	 action="/employer/duty/update"/>
+	 
+	 <acme:form-submit test="${command == 'show' }"
+	 code="employer.job.form.button.delete" 
+	 action="/employer/duty/delete"/>
+	 
+	 <acme:form-submit test="${command == 'update' }"
+	 code="employer.job.form.button.update" 
+	 action="/employer/duty/update"/>
+	 
+	 <acme:form-submit test="${command == 'delete' }"
+	 code="employer.job.form.button.delete" 
+	 action="/employer/duty/delete"/>
+	
 	<acme:form-return code="employer.duty.form.button.return" />
 </acme:form>

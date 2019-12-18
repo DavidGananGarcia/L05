@@ -73,12 +73,12 @@ public class EmployerJobDeleteService implements AbstractDeleteService<Employer,
 		assert entity != null;
 		assert errors != null;
 
-		boolean conAplicacion;
+		boolean sinAplicacion;
 
 		if (!errors.hasErrors("job")) {
 			//Si ningun trabajador ha hecho una applicacion para nuestro job, se debe revisar con una query
-			conAplicacion = this.repository.findOneApplicationByJodId(request.getModel().getInteger("id")).size() < 1;
-			errors.state(request, conAplicacion, "descriptor.description", "employer.job.error.conaplicacion");
+			sinAplicacion = this.repository.findOneApplicationByJodId(request.getModel().getInteger("id")).size() < 1;
+			errors.state(request, sinAplicacion, "descriptor.description", "employer.job.error.conaplicacion");
 		}
 
 	}

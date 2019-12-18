@@ -89,6 +89,9 @@ public class EmployerDutyUpdateService implements AbstractUpdateService<Employer
 		assert entity != null;
 		assert errors != null;
 
+		boolean porcentajes = this.repository.sumPercentage(entity.getDescriptor().getId()) <= 100;
+		errors.state(request, porcentajes, "percentage", "error.duty.sumapercentages");
+
 	}
 
 	@Override

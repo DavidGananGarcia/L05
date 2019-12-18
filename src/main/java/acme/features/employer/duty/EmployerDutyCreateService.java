@@ -77,17 +77,16 @@ public class EmployerDutyCreateService implements AbstractCreateService<Employer
 		assert entity != null;
 		assert errors != null;
 
+		if (this.repository.countDuty(entity.getDescriptor().getId()) > 0) {
+			boolean porcentajes = this.repository.sumPercentage(entity.getDescriptor().getId()) + entity.getPercentage() <= 100;
+			errors.state(request, porcentajes, "percentage", "error.duty.sumapercentages");
+		}
 	}
 
 	@Override
 	public void create(final Request<Duty> request, final Duty entity) {
 		assert request != null;
 		assert entity != null;
-
-		int descriptorId = request.getModel().getInteger("id");
-		Descriptor d = this.repository.findOneDescriptorById(descriptorId);
-
-		entity.setDescriptor(d);
 
 		this.repository.save(entity);
 	}
