@@ -52,6 +52,10 @@ public class Application extends DomainEntity {
 	@NotBlank
 	private String				someQualifications;
 
+	private String				justification;
+
+	//---------------- RELATION SHIPS
+
 	@NotNull
 	@Valid
 	@ManyToOne(optional = false)

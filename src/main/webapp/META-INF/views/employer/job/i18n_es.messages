@@ -15,7 +15,6 @@ employer.job.form.label.salary= Salario:
 employer.job.form.label.moreInfo= Más Información:
 employer.job.form.label.finalMode= Modo Final:
 employer.job.form.label.status= Estado:
-employer.job.form.label.descriptor= Descriptor:
 employer.job.form.label.finalMode = Modo Final:
 employer.job.form.label.status = Estado:
 employer.job.form.label.active = Activo: 
@@ -24,12 +23,14 @@ employer.job.form.label.true = Sí
 employer.job.form.label.false = No
 
 
+
 employer.job.form.button.return= Volver
 employer.job.form.button.update= Actualizar
 employer.job.form.button.delete= Eliminar
 employer.job.form.button.duties = Deberes
 employer.job.form.button.create = Crear
 employer.job.form.button.crearduties= Crear un deber
+
 
 
 
