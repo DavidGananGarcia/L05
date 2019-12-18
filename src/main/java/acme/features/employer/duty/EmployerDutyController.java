@@ -31,7 +31,19 @@ public class EmployerDutyController extends AbstractController<Employer, Duty> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private EmployerDutyListMineService listmineService;
+	private EmployerDutyListMineService	listmineService;
+
+	@Autowired
+	private EmployerDutyCreateService	createService;
+
+	@Autowired
+	private EmployerDutyUpdateService	updateService;
+
+	@Autowired
+	private EmployerDutyDeleteService	deleteService;
+
+	@Autowired
+	private EmployerDutyShowService		showService;
 
 
 	// Constructors -----------------------------------------------------------
@@ -39,6 +51,10 @@ public class EmployerDutyController extends AbstractController<Employer, Duty> {
 	@PostConstruct
 	private void initialise() {
 		super.addCustomCommand(CustomCommand.LIST_MINE, BasicCommand.LIST, this.listmineService);
+		super.addBasicCommand(BasicCommand.CREATE, this.createService);
+		super.addBasicCommand(BasicCommand.UPDATE, this.updateService);
+		super.addBasicCommand(BasicCommand.DELETE, this.deleteService);
+		super.addBasicCommand(BasicCommand.SHOW, this.showService);
 	}
 
 }

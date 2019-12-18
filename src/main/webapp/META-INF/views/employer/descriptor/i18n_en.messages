@@ -13,9 +13,6 @@ employer.duty.form.label.description = Description:
 employer.duty.form.label.percentage = Percentage:
 
 
-employer.duty.form.button.return= Principal page
-employer.duty.form.button.create = Create
+employer.job.form.button.return= Return
 
-employer.duty.list.label.title = Title:
-employer.duty.list.label.description = Description:
-employer.duty.list.label.percentage = Percentage:
+employer.descriptor.list.label.description = Description:

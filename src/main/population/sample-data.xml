@@ -341,6 +341,20 @@
 	<property name="descriptor" ref="descriptor2"/>
 	</bean>
 	
+	<bean name="duty3"   class="acme.entities.jobs.Duty">
+	<property name="title" value="duty3"/>
+	<property name="description" value="Análisis de requisitos"/>
+	<property name="percentage" value="42."/>
+	<property name="descriptor" ref="descriptor1"/>
+	</bean>
+	
+	<bean name="duty4"   class="acme.entities.jobs.Duty">
+	<property name="title" value="duty4"/>
+	<property name="description" value="Tratamiento de recursos"/>
+	<property name="percentage" value="38."/>
+	<property name="descriptor" ref="descriptor1"/>
+	</bean>
+	
 <!-- JOBS -->		
 		
 	<bean name="job1" class="acme.entities.jobs.Job">
@@ -349,7 +363,7 @@
 		<property name="deadline" value="2030/12/11 23:59" />
 		<property name="salary" value="€ 15,000.98" />
 		<property name="moreInfo" value="http://www.example.com" />
-		<property name="finalMode" value="true" />
+		<property name="finalMode" value="false" />
 		<property name="status" value="DRAFT"/>
 		<property name="active" value="true"></property>
 		<property name="employer" ref="employer1Employer" />
@@ -362,17 +376,11 @@
 		<property name="deadline" value="2030/12/11 23:59" />
 		<property name="salary" value="€ 20,000.00" />
 		<property name="moreInfo" value="http://www.example.com" />
-		<property name="finalMode" value="true" />
+		<property name="finalMode" value="false" />
 		<property name="status" value="PUBLISHED"/>
 		<property name="active" value="false"></property>
 		<property name="employer" ref="employer1Employer" />
 		<property name="descriptor" ref="descriptor2"/>
 	</bean>
-
-
-
-
-
-
 </beans>
 

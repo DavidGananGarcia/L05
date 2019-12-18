@@ -99,6 +99,7 @@ master.menu.user-account.investor= List Investors
 
 master.menu.employer = Employer
 master.menu.employer.job.listMine = List my jobs
+master.menu.employer.job.create = Create a job
 
 # master.menu.authenticated ##################################################
 
